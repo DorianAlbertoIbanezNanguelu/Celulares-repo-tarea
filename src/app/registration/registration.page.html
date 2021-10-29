@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>API - Registro con correo electrónico</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>    
+    <ion-item lines="full">
+      <ion-label position="floating">Correo electrónico</ion-label>
+      <ion-input type="text" #email required></ion-input>
+    </ion-item> 
+
+    <ion-item lines="full">
+      <ion-label position="floating">Nombre de Usuario</ion-label>
+      <ion-input type="text" #displayName required ></ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" #password required (keypress.enter)="signUp(email, password)"></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col> 
+      <ion-button type="submit" (click)="signUp(email, displayName, password)" expand="block">Registrar</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col> 
+        <ion-button 
+        color="success"
+        (click)="irAlInicioSesion()" 
+        expand="block">
+          Ya tienes cuenta? Inicia sesión
+       </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+
+  
+</ion-content>

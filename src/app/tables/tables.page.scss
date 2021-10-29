@@ -1,0 +1,38 @@
+[class*="tabla-"] {
+    float: left;
+    width: 100%;
+    margin-top: 2%;
+  }
+
+  ion-button{
+    float:left;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+
+@media only screen and (min-width: 768px) {
+  ion-button{
+    float:left;
+
+  }
+    .tabla-Clientes{
+        float: left;
+        width: 50%;
+        margin-top: 2%;
+
+    }
+    .tabla-Tecnicos{
+      float: left;
+      width: 50%;
+      margin-top: 2%;
+    }
+    .tabla-Interno{
+      float: left;
+      width: 50%;
+    }
+
+    .tabla-Celulares{
+      margin-top: 2%;
+    }
+  }

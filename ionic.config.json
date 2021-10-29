@@ -1,0 +1,9 @@
+{
+  "name": "Aplicación Móvil del Sistema de Registro, Seguimiento y Mantenimiento de Equipo Electrónico",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular",
+  "id": "34cd2c6d"
+}

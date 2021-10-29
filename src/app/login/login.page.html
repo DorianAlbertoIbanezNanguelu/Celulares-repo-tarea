@@ -1,0 +1,49 @@
+<ion-header >
+  <ion-toolbar class="centrar">
+    <ion-title >API - Inicio de Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="backgound-black">
+
+
+
+  <form class="formulario">    
+    <ion-item lines="none">
+      <ion-label position="floating">Correo Electrónico</ion-label>
+      <ion-input type="text" #email required></ion-input>
+    </ion-item> 
+
+    <ion-item lines="none">
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input type="password" #password required (keydown.enter)="logIn(email, password)"></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col> 
+      <ion-button type="submit" (click)="logIn(email, password)" expand="block">Entrar</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button 
+        type="submit" 
+        color="danger"
+        (click)="authService.GoogleAuth()" 
+        expand="block">
+          Iniciar Sesión con Google
+       </ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button 
+        color="success"
+        (click)="irAlRegistro()" 
+        expand="block">
+          Registrate
+       </ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

@@ -1,0 +1,27 @@
+.formulario{
+    width: 10%;
+}
+
+ion-avatar{
+    width:100% !important;  
+    height : 100% !important;  
+    max-width: 100px !important;  //any size
+    max-height: 100px !important; //any size 
+}
+
+
+.perfil{
+    display: flex !important;
+    justify-content: center !important;
+    text-align: center;
+    margin-top: 3%;
+    
+}
+
+.nombre{
+    text-align: center;
+}
+
+.email{
+    text-align: center;
+}

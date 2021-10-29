@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="dashboard"></ion-back-button>
+      </ion-buttons>
+    <ion-title>
+      Generar Equipo Electrónico
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list lines="full">
+    <form [formGroup]="bookingForm" (ngSubmit)="formSubmit()">
+      <ion-item>
+        <ion-label position="floating">Equipo</ion-label>
+        <ion-input formControlName="equipo" type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Modelo</ion-label>
+        <ion-input formControlName="modelo" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Marca</ion-label>
+        <ion-input formControlName="marca" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">IMEI</ion-label>
+        <ion-input formControlName="imei" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Falla</ion-label>
+        <ion-input formControlName="falla" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item> 
+        <ion-label position="floating">Nombre del Cliente</ion-label> 
+        <ion-select formControlName="id_cliente" okText="Aceptar" cancelText="Cancelar"> 
+        <ion-select-option *ngFor="let booking of Bookings1">{{booking.nombre}}</ion-select-option> 
+        </ion-select> 
+      </ion-item> 
+
+      <ion-item> 
+        <ion-label position="floating">Nombre del Tecnico</ion-label> 
+        <ion-select formControlName="id_tecnico" okText="Aceptar" cancelText="Cancelar"> 
+          <ion-select-option *ngFor="let booking of Bookings2">{{booking.nombre}}</ion-select-option> 
+        </ion-select> 
+      </ion-item> 
+
+      <ion-item>
+        <ion-label position="floating">Reparacion</ion-label>
+        <ion-input formControlName="reparacion" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Estatus del Celular</ion-label>
+        <ion-input formControlName="estatus" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Observaciones</ion-label>
+        <ion-input formControlName="observaciones" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Nota adicional</ion-label>
+        <ion-input formControlName="notas" type="text" required>
+        </ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="success" shape="full" expand="block">Generar Equipo</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
+</ion-content>

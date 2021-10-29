@@ -1,0 +1,155 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    <ion-title>
+      Tablas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list class="tabla-Clientes">
+    <ion-list-header >
+      Clientes
+    </ion-list-header>
+    <ion-item *ngFor="let booking of Bookings1" class="user-list ">
+      <div class="item-note" item-end>
+        <button ion-button clear [routerLink]="['/editar-cliente/', booking.$key]">
+          <ion-icon name="create" style="zoom:2.0"></ion-icon>
+        </button>
+        <button ion-button clear (click)="deleteBookingCliente(booking.$key)">
+          <ion-icon name="trash" style="zoom:2.0"></ion-icon>
+        </button>
+      </div>
+      <ion-label>
+        <h5>
+          <ion-icon name="person"></ion-icon> {{booking.nombre}}
+        </h5>
+        <p>
+        <h5>
+          <ion-icon name="mail"></ion-icon> {{booking.correo}}
+        </h5>
+        <p>
+        <h5>
+        <ion-icon name="call"></ion-icon> {{booking.celular}}
+        </h5>
+        <p>
+        <h5>
+          <ion-icon name="list"></ion-icon> {{booking.direccion}}
+        </h5>
+        <p>
+        <h5>
+          <ion-icon name="calendar"></ion-icon>Registro: {{booking.fecha_reg}}
+        </h5>
+        <p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list class="tabla-Tecnicos">
+    <ion-list-header >
+      Tecnicos
+    </ion-list-header>
+    <ion-item *ngFor="let booking of Bookings2" class="user-list">
+      <div class="item-note" item-end>
+        <button ion-button clear [routerLink]="['/editar-tecnico/', booking.$key]">
+          <ion-icon name="create" style="zoom:2.0"></ion-icon>
+        </button>
+        <button ion-button clear (click)="deleteBookingTecnico(booking.$key)">
+          <ion-icon name="trash" style="zoom:2.0"></ion-icon>
+        </button>
+      </div>
+      <ion-label>
+        <h5>
+          <ion-icon name="person"></ion-icon> {{booking.nombre}}
+        </h5>
+        <p>
+        <h5>
+          <ion-icon name="mail"></ion-icon> {{booking.correo}}
+        </h5>
+        <p>
+        <h5>
+        <ion-icon name="call"></ion-icon> {{booking.celular}}
+        </h5>
+        <p>
+        <h5>
+          <ion-icon name="list"></ion-icon> {{booking.direccion}}
+        </h5>
+        <p>
+        <h5>
+          <ion-icon name="calendar"></ion-icon>Registro: {{booking.fecha_reg}}
+        </h5>
+        <p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-list class="tabla-Celulares">
+    <ion-list-header >
+      Equipos Electrónicos
+    </ion-list-header>
+    <ion-item *ngFor="let booking of Bookings3" class="user-list tabla-Interno" >
+      <div class="item-note" item-end>
+        <button ion-button clear [routerLink]="['/editar-celular/', booking.$key]">
+          <ion-icon name="create" style="zoom:2.0"></ion-icon>
+        </button>
+        <button ion-button clear (click)="deleteBookingCelular(booking.$key)">
+          <ion-icon name="trash" style="zoom:2.0"></ion-icon>
+        </button>
+      </div>
+      <ion-label>
+        <h5>
+          <ion-icon name="document-text-outline"></ion-icon> {{booking.equipo}}
+        </h5>
+        <p>
+        <h5>
+          <ion-icon name="documents-outline"></ion-icon> {{booking.modelo}}
+        </h5>
+        <p>
+        <h5>
+          <ion-icon name="cloud-upload-outline"></ion-icon> {{booking.marca}}
+        </h5>
+        <p>
+        <h5>
+          <ion-icon name="earth-outline"></ion-icon> {{booking.imei}}
+        </h5>
+        <p>
+        <h5>
+          <ion-icon name="close-circle-outline"></ion-icon> {{booking.falla}}
+        </h5>
+        <p>
+        <h5>
+          <ion-icon name="person"></ion-icon> {{booking.id_cliente}}
+        </h5>
+        <p>
+        <h5>
+          <ion-icon name="person"></ion-icon> {{booking.id_tecnico}}
+        </h5>
+        <p>
+        <h5>
+          <ion-icon name="build-outline"></ion-icon> {{booking.reparacion}}
+        </h5>
+        <p>
+        <h5>
+          <ion-icon name="bandage-outline"></ion-icon> {{booking.observaciones}}
+        </h5>
+        <p>
+        <h5>
+          <ion-icon name="chatbubble-ellipses-outline"></ion-icon> {{booking.notas}}
+        </h5>
+        <p>
+        <h5>
+          <ion-icon name="calendar"></ion-icon>Entrada: {{booking.fecha_reg}}
+        </h5>
+        <p>
+        <h5>
+          <ion-icon name="calendar"></ion-icon>Salida: {{booking.fecha_sal}}
+        </h5>
+        <p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button type="success" (click)="gotoDashboard()" >Regresar a Dashboard</ion-button>
+  <ion-button color="success" (click)="gotoGenerateClient()" >Generar Cliente</ion-button>
+  <ion-button color="warning" (click)="gotoGenerateTecnico()" >Generar Tecnico</ion-button>
+  <ion-button color="danger" (click)="gotoGenerateCelular()" >Generar Equipo</ion-button>
+</ion-content>
