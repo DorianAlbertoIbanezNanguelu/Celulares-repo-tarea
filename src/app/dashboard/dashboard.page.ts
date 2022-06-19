@@ -39,6 +39,7 @@ export class DashboardPage implements OnInit {
     this.getUserLoggedIn();  
     this.sideMenu();
     this.initializeApp();
+    window.location.reload();
 
     }
 
@@ -52,6 +53,7 @@ export class DashboardPage implements OnInit {
     
     getUserLoggedIn() {
       this.user = JSON.parse(localStorage.getItem('user'));
+      
     }
   
 
